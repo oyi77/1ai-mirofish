@@ -1,0 +1,122 @@
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 46, in create_app
+    from .services.simulation_runner import SimulationRunner
+  File "/home/openclaw/projects/mirofish/backend/app/services/__init__.py", line 6, in <module>
+    from .graph_builder import GraphBuilderService
+  File "/home/openclaw/projects/mirofish/backend/app/services/graph_builder.py", line 13, in <module>
+    from zep_cloud.client import Zep
+ModuleNotFoundError: No module named 'zep_cloud'
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 46, in create_app
+    from .services.simulation_runner import SimulationRunner
+  File "/home/openclaw/projects/mirofish/backend/app/services/__init__.py", line 6, in <module>
+    from .graph_builder import GraphBuilderService
+  File "/home/openclaw/projects/mirofish/backend/app/services/graph_builder.py", line 13, in <module>
+    from zep_cloud.client import Zep
+ModuleNotFoundError: No module named 'zep_cloud'
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 46, in create_app
+    from .services.simulation_runner import SimulationRunner
+  File "/home/openclaw/projects/mirofish/backend/app/services/__init__.py", line 6, in <module>
+    from .graph_builder import GraphBuilderService
+  File "/home/openclaw/projects/mirofish/backend/app/services/graph_builder.py", line 13, in <module>
+    from zep_cloud.client import Zep
+ModuleNotFoundError: No module named 'zep_cloud'
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 46, in create_app
+    from .services.simulation_runner import SimulationRunner
+  File "/home/openclaw/projects/mirofish/backend/app/services/__init__.py", line 6, in <module>
+    from .graph_builder import GraphBuilderService
+  File "/home/openclaw/projects/mirofish/backend/app/services/graph_builder.py", line 13, in <module>
+    from zep_cloud.client import Zep
+ModuleNotFoundError: No module named 'zep_cloud'
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 46, in create_app
+    from .services.simulation_runner import SimulationRunner
+  File "/home/openclaw/projects/mirofish/backend/app/services/__init__.py", line 6, in <module>
+    from .graph_builder import GraphBuilderService
+  File "/home/openclaw/projects/mirofish/backend/app/services/graph_builder.py", line 13, in <module>
+    from zep_cloud.client import Zep
+ModuleNotFoundError: No module named 'zep_cloud'
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 66, in create_app
+    from .api import graph_bp, simulation_bp, report_bp
+  File "/home/openclaw/projects/mirofish/backend/app/api/__init__.py", line 12, in <module>
+    from . import simulation  # noqa: E402, F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/openclaw/projects/mirofish/backend/app/api/simulation.py", line 77
+    stats = await pm.get_market_stats(question)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'await' outside async function
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 66, in create_app
+    from .api import graph_bp, simulation_bp, report_bp
+  File "/home/openclaw/projects/mirofish/backend/app/api/__init__.py", line 12, in <module>
+    from . import simulation  # noqa: E402, F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/openclaw/projects/mirofish/backend/app/api/simulation.py", line 77
+    stats = await pm.get_market_stats(question)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'await' outside async function
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 66, in create_app
+    from .api import graph_bp, simulation_bp, report_bp
+  File "/home/openclaw/projects/mirofish/backend/app/api/__init__.py", line 12, in <module>
+    from . import simulation  # noqa: E402, F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/openclaw/projects/mirofish/backend/app/api/simulation.py", line 77
+    stats = await pm.get_market_stats(question)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'await' outside async function
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 66, in create_app
+    from .api import graph_bp, simulation_bp, report_bp
+  File "/home/openclaw/projects/mirofish/backend/app/api/__init__.py", line 12, in <module>
+    from . import simulation  # noqa: E402, F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/openclaw/projects/mirofish/backend/app/api/simulation.py", line 77
+    stats = await pm.get_market_stats(question)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'await' outside async function
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 66, in create_app
+    from .api import graph_bp, simulation_bp, report_bp
+  File "/home/openclaw/projects/mirofish/backend/app/api/__init__.py", line 12, in <module>
+    from . import simulation  # noqa: E402, F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/openclaw/projects/mirofish/backend/app/api/simulation.py", line 77
+    stats = await pm.get_market_stats(question)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'await' outside async function
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    app = create_app()
+  File "/home/openclaw/projects/mirofish/backend/app/__init__.py", line 66, in create_app
+    from .api import graph_bp, simulation_bp, report_bp
+  File "/home/openclaw/projects/mirofish/backend/app/api/__init__.py", line 12, in <module>
+    from . import simulation  # noqa: E402, F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/openclaw/projects/mirofish/backend/app/api/simulation.py", line 77
+    stats = await pm.get_market_stats(question)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'await' outside async function
