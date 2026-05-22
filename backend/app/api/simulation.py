@@ -2843,40 +2843,37 @@ def get_trading_signals():
         if not Config.ZEP_API_KEY:
             return jsonify({"signals": [], "error": "Zep not configured"}), 500
 
-        # Get latest project with graph
+        # Get ALL projects with graphs
         from ..models.project import ProjectManager
 
         projects = ProjectManager.list_projects()
-        project = None
-        graph_id = None
-        for p in projects:
-            if p.graph_id:
-                project = p
-                graph_id = p.graph_id
-                break
+        graph_projects = [p for p in projects if p.graph_id and p.status == "graph_completed"]
 
-        if not graph_id:
-            return jsonify({"signals": [], "error": "No graph available"})
+        if not graph_projects:
+            return jsonify({"signals": [], "error": "No graphs available"})
 
-        # Read graph entities
+        # Read entities from ALL graphs
         reader = ZepEntityReader()
-        filtered = reader.filter_defined_entities(
-            graph_id=graph_id, enrich_with_edges=True
-        )
-
-        # Build context from graph entities
         entity_summaries = []
-        for entity in filtered.entities[:20]:
-            summary = f"- {entity.name}: {entity.summary or 'N/A'}"
-            if entity.related_edges:
-                edges_str = "; ".join(
-                    f"{e.get('fact_type', 'RELATED')}: {e.get('fact', '')}"
-                    for e in entity.related_edges[:3]
-                )
-                summary += f" [{edges_str}]"
-            entity_summaries.append(summary)
 
-        graph_context = "\n".join(entity_summaries)
+        for p in graph_projects:
+            try:
+                filtered = reader.filter_defined_entities(
+                    graph_id=p.graph_id, enrich_with_edges=True
+                )
+                for entity in filtered.entities[:15]:
+                    summary = f"- [{p.name}] {entity.name}: {entity.summary or 'N/A'}"
+                    if entity.related_edges:
+                        edges_str = "; ".join(
+                            f"{e.get('fact_type', 'RELATED')}: {e.get('fact', '')}"
+                            for e in entity.related_edges[:3]
+                        )
+                        summary += f" [{edges_str}]"
+                    entity_summaries.append(summary)
+            except Exception as e:
+                logger.warning(f"Failed to read graph {p.graph_id}: {e}")
+
+        graph_context = "\n".join(entity_summaries[:50])
 
         # LLM call to generate signals
         import httpx
