@@ -2856,7 +2856,7 @@ def get_trading_signals():
         reader = ZepEntityReader()
         entity_summaries = []
 
-        for p in graph_projects[:5]:  # Limit to 5 graphs for speed
+        for p in graph_projects:
             try:
                 filtered = reader.filter_defined_entities(
                     graph_id=p.graph_id, enrich_with_edges=True
